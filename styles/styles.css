@@ -1,0 +1,50 @@
+nav {
+    background-color: #2c3e50;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+main {
+    max-width: 900px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+main img {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #2c3e50;
+    padding: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+aside {
+    width: 250px;
+    margin: 20px;
+    border: 1px solid #2c3e50;
+    padding: 15px;
+    background-color: #f0f0f0;
+    color: #222222;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+p {
+    padding: 0;
+}
+
+footer {
+    margin-top: 20px;
+    border-top: 2px solid #2c3e50;
+    text-align: center;
+}
