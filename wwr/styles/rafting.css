@@ -98,21 +98,9 @@ main h2 {
     margin-bottom: 0.5rem;
 }
 
-/* History: image beside the paragraph */
-.history {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 1rem;
-    align-items: start;
-}
-
-.history h2 {
-    grid-column: 1 / -1;
-}
-
-.history img {
-    width: 100%;
-    height: auto;
+.history p {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Adventures: five figures across the section */
@@ -172,9 +160,5 @@ footer {
     .navigation {
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .history {
-        grid-template-columns: 1fr;
     }
 }
