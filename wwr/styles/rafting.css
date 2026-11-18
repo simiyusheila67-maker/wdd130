@@ -2,6 +2,7 @@
     --primary-color: #d9c8ff;
     --text-color: #222222;
     --section-bg: #f5f5f5;
+    --link-color: #2a1a5e;
 }
 
 * {
@@ -15,26 +16,44 @@ body {
     color: var(--text-color);
 }
 
-header,
-footer {
+/* Header: grid for logo + nav */
+header {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 1rem;
     background-color: var(--primary-color);
     padding: 1rem;
 }
 
 header img {
     width: 100px;
+    height: auto;
     display: block;
-    margin-bottom: 1rem;
 }
 
-nav ul {
+/* Nav: flex for the links */
+.navigation {
+    display: flex;
     list-style: none;
 }
 
-nav li {
-    margin-bottom: 0.5rem;
+.navigation li {
+    flex: 1 1 auto;
+    text-align: center;
 }
 
+header nav a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
 .hero {
     position: relative;
 }
@@ -67,16 +86,71 @@ nav li {
     margin-left: 1rem;
 }
 
+/* Sections */
 main section {
     background-color: var(--section-bg);
     padding: 1rem;
     margin: 1rem 0;
-    min-height: 100px;
 }
 
 main h2 {
     text-align: center;
     margin-bottom: 0.5rem;
+}
+
+/* History: image beside the paragraph */
+.history {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.history h2 {
+    grid-column: 1 / -1;
+}
+
+.history img {
+    width: 100%;
+    height: auto;
+}
+
+/* Adventures: five figures across the section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.gallery figure {
+    flex: 1 1 150px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery figcaption {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+
+/* Footer: text left, social icons right */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 0.75rem;
 }
 
 .socialmedia a {
@@ -86,4 +160,21 @@ main h2 {
 .socialmedia img {
     width: 32px;
     height: 32px;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .history {
+        grid-template-columns: 1fr;
+    }
 }
